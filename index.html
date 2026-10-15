@@ -1,9 +1,11 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cardiosoppi V4</title><meta name="theme-color" content="#17375e"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png"><style>
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cardiosoppi V5 — Sincronizzazione</title><meta name="theme-color" content="#17375e"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon-192.png"><style>
 :root{font-family:system-ui,Arial,sans-serif;color:#17263c;background:#eef4f3}*{box-sizing:border-box}body{margin:0}header{background:linear-gradient(110deg,#122a40,#246879);color:white;padding:18px 24px}header h1{margin:0;font-size:24px}header small{opacity:.85}.wrap{max-width:1200px;margin:auto;padding:18px}.grid{display:grid;grid-template-columns:280px 1fr;gap:18px}.card{background:white;border-radius:18px;padding:18px;box-shadow:0 2px 10px #17375e12;margin-bottom:18px}h2{font-size:19px;margin:0 0 14px}h3{font-size:16px;margin:14px 0 8px}label{display:block;font-size:13px;font-weight:650;margin:9px 0 4px}input,select,textarea{width:100%;border:1px solid #bdc9d7;border-radius:7px;padding:9px;font:inherit;background:white}textarea{resize:vertical}button{border:0;border-radius:8px;background:#166d78;color:white;padding:10px 13px;cursor:pointer;font-weight:650}button.secondary{background:#e8eff7;color:#1d4265}button.danger{background:#a52d39}button:disabled{opacity:.5;cursor:not-allowed}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.people button{display:block;width:100%;text-align:left;margin:6px 0;background:#eaf5f4;color:#14515a}.people button.active{background:#166d78;color:white}.fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 12px}.range-fields{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 12px}.notice{font-size:13px;color:#4b5c6d;line-height:1.5}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:9px 8px;border-bottom:1px solid #e5ebf2;text-align:left;white-space:nowrap}th{background:#f1f5f9}td button{padding:5px 8px;margin-right:4px}.chart-wrap{overflow-x:auto}svg{display:block;min-width:620px;width:100%;height:auto}.legend{display:flex;gap:16px;font-size:13px;align-items:center;margin:10px 0}.dot{display:inline-block;width:13px;height:13px;border-radius:3px;margin-right:5px;vertical-align:middle}.flag{display:inline-block;padding:3px 7px;border-radius:6px;font-size:12px;font-weight:700}.flag.bad{background:#fee2e2;color:#991b1b}.flag.ok{background:#dcfce7;color:#166534}.flag.na{background:#f1f5f9;color:#475569}.empty{color:#64748b;padding:20px;text-align:center}#status{color:#176044;font-size:13px;min-height:18px}.toast{position:fixed;bottom:18px;right:18px;background:#176044;color:white;padding:14px 20px;border-radius:12px;box-shadow:0 6px 25px #0003;z-index:10;max-width:90vw}.summary-tabs{display:flex;gap:8px;flex-wrap:wrap}.summary-tabs button{background:#eaf3f3;color:#175563}.summary-tabs button.on{background:#166d78;color:white}.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:14px 0}.metric{padding:15px;background:#f2f8f7;border-radius:13px}.metric b{font-size:28px;display:block}.stack{display:flex;height:22px;overflow:hidden;border-radius:8px;background:#e2e8f0}.stack span{height:100%}.summary-key{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;margin-top:10px}.summary-key i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:4px}.help summary{cursor:pointer;font-weight:700;color:#176d78}.help{background:#f3f8f7;padding:12px;border-radius:12px;margin:12px 0}.summary-note{font-size:13px;color:#566575;line-height:1.5}@media(max-width:500px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.metric b{font-size:23px}}@media(max-width:800px){.grid{grid-template-columns:1fr}.fields{grid-template-columns:repeat(2,minmax(0,1fr))}.range-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.wrap{padding:10px}.card{padding:14px}}
 @media(max-width:800px){header{padding:14px 16px}header h1{font-size:23px}.grid{gap:0}.card{margin-bottom:12px}.fields,.range-fields{grid-template-columns:repeat(2,minmax(0,1fr))}input,select,textarea{font-size:16px;min-height:44px}button{min-height:44px}h2{font-size:18px}.chart-wrap{overscroll-behavior-x:contain}.legend{flex-wrap:wrap;gap:8px}}@media(max-width:420px){.fields,.range-fields{grid-template-columns:1fr}.wrap{padding:8px}.card{padding:12px}.actions button{flex:1}}
 
 .brand-header{display:flex;align-items:center;gap:15px}.brand-logo{width:86px;height:86px;object-fit:contain;flex-shrink:0;border-radius:50%}@media(max-width:600px){.brand-logo{width:66px;height:66px}.brand-header{gap:10px}}
-</style></head><body><header class="brand-header"><img class="brand-logo" src="logo-cardiosoppi.webp" alt="Logo Cardiosoppi: cuore sorridente con misuratore della pressione"><div><h1>Cardiosoppi</h1><small>Diario della pressione · Profili separati · Offline</small></div></header><div class="wrap"><div class="grid"><aside><section class="card"><h2>Persone</h2><div class="people" id="people"></div><div class="actions"><button id="newPerson">+ Nuova persona</button></div></section><section class="card"><h2>Riferimenti</h2><p class="notice"><a href="https://academic.oup.com/eurheartj/article/45/38/3912/7741010" target="_blank" rel="noopener">Linee guida ESC 2024</a>. Le soglie indicate riguardano gli adulti. Per bambini, gravidanza o condizioni particolari serve una valutazione specifica.</p></section><section class="card"><h2>Archivio dati</h2><p class="notice">I dati rimangono in questo browser e dispositivo. Non vengono inviati a un server. Effettua regolarmente un backup.</p><div class="actions"><button id="export">Esporta backup</button><button class="secondary" id="importBtn">Importa backup</button><input id="importFile" type="file" accept="application/json,.json" hidden></div><p id="status" role="status"></p></section></aside><main id="main"><div class="card empty">Aggiungi una persona per iniziare.</div></main></div></div><script>
+
+.sync-panel{border:2px solid #b8ddd9;background:#f2faf8}.sync-panel h2{display:flex;align-items:center;gap:8px}.sync-status{font-weight:650;line-height:1.5;margin:10px 0;padding:9px;background:#e6f0f1;border-radius:8px}.sync-panel input{min-width:0}.sync-panel .small{font-size:12px;color:#536575}.sync-row{display:flex;gap:8px;flex-wrap:wrap}.sync-row button{flex:1;min-width:105px}.sync-panel details{margin-top:10px}.sync-panel code{word-break:break-all}#sync-merge{display:none}
+</style></head><body><header class="brand-header"><img class="brand-logo" src="logo-cardiosoppi.webp" alt="Logo Cardiosoppi: cuore sorridente con misuratore della pressione"><div><h1>Cardiosoppi</h1><small>Diario della pressione · Profili separati · Offline</small></div></header><div class="wrap"><div class="grid"><aside><section class="card sync-panel" id="sync-panel"><h2>☁ Cardiosoppi Sync</h2><div class="sync-status" id="sync-status" role="status">Archivio locale · sincronizzazione da configurare</div><div id="sync-config"><p class="notice">Collega il tuo progetto Supabase: questi due valori sono pubblici e non sono password.</p><label>Project URL Supabase</label><input id="sb-url" type="url" placeholder="https://xxxx.supabase.co" autocomplete="url"><label>Publishable key (oppure anon key)</label><input id="sb-key" type="text" placeholder="sb_publishable_..." autocomplete="off"><div class="actions"><button type="button" id="sync-config-save">Salva collegamento</button></div></div><div id="sync-login" hidden><label>Email account Cardiosoppi</label><input id="sync-email" type="email" autocomplete="username" placeholder="indirizzo email"><label>Password</label><input id="sync-password" type="password" autocomplete="current-password"><div class="sync-row actions"><button id="sync-signin" type="button">Accedi</button><button class="secondary" type="button" id="sync-change">Cambia progetto</button></div></div><div id="sync-connected" hidden><p class="small" id="sync-user"></p><div class="sync-row actions"><button type="button" id="sync-now">Sincronizza ora</button><button type="button" class="secondary" id="sync-signout">Esci</button></div><div class="actions"><button type="button" class="secondary" id="sync-merge">Unisci dati locali precedenti</button></div><p class="small">Connesso: le modifiche sono salvate subito sul dispositivo e inviate al cloud; senza rete rimangono in coda finché torni online. Controlla lo stato prima di cambiare dispositivo.</p></div><details><summary class="small">Informazioni sulla riservatezza</summary><p class="notice">I dati sanitari vengono conservati nel progetto Supabase e localmente su ciascun dispositivo. Proteggi accesso al dispositivo e password. GitHub contiene soltanto il programma. Non inserire mai la chiave service_role.</p></details></section><section class="card"><h2>Persone</h2><div class="people" id="people"></div><div class="actions"><button id="newPerson">+ Nuova persona</button></div></section><section class="card"><h2>Riferimenti</h2><p class="notice"><a href="https://academic.oup.com/eurheartj/article/45/38/3912/7741010" target="_blank" rel="noopener">Linee guida ESC 2024</a>. Le soglie indicate riguardano gli adulti. Per bambini, gravidanza o condizioni particolari serve una valutazione specifica.</p></section><section class="card"><h2>Archivio dati</h2><p class="notice">I dati rimangono in questo browser e dispositivo. Non vengono inviati a un server. Effettua regolarmente un backup.</p><div class="actions"><button id="export">Esporta backup</button><button class="secondary" id="importBtn">Importa backup</button><input id="importFile" type="file" accept="application/json,.json" hidden></div><p id="status" role="status"></p></section></aside><main id="main"><div class="card empty">Aggiungi una persona per iniziare.</div></main></div></div><script>
 'use strict';const KEY='diario_pressione_v1';let db={people:[]},selected=null,editing=null,period="week";const $=id=>document.getElementById(id);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const uid=()=>typeof crypto!=='undefined'&&typeof crypto.randomUUID==='function'?crypto.randomUUID():String(Date.now())+Math.random();function save(){try{const payload=JSON.stringify(db);localStorage.setItem(KEY,payload);if(localStorage.getItem(KEY)!==payload)throw Error('Verifica fallita');$('status').textContent='✓ Dati salvati e verificati nel browser · '+new Date().toLocaleTimeString('it-IT');return true}catch(e){$('status').textContent='⚠ Salvataggio non riuscito';alert('Non è stato possibile salvare i dati su questo browser. Esporta subito un backup.');return false}}function load(){try{const raw=localStorage.getItem(KEY);if(raw){const obj=JSON.parse(raw);if(Array.isArray(obj.people))db=obj}}catch(e){alert('Impossibile leggere i dati salvati.')}}function age(b){if(!b)return null;const d=new Date(b+'T12:00:00'),now=new Date();if(!Number.isFinite(d.getTime())||d>now)return null;let n=now.getFullYear()-d.getFullYear();if(now.getMonth()<d.getMonth()||(now.getMonth()===d.getMonth()&&now.getDate()<d.getDate()))n--;return n}function threshold(p){return p.setting==='clinic'?{sys:140,dia:90}:{sys:135,dia:85}}function limits(p){const t=threshold(p);return {sys:p.customSys??t.sys,dia:p.customDia??t.dia}}function person(){return db.people.find(p=>p.id===selected)}function today(){const d=new Date();return new Date(d.getTime()-d.getTimezoneOffset()*60000).toISOString().slice(0,16)}function render(){const p=person();$('people').innerHTML=db.people.length?db.people.map(x=>`<button data-person="${esc(x.id)}" class="${x.id===selected?'active':''}">${esc(x.name)}</button>`).join(''):'<p class="notice">Nessuna persona inserita.</p>';$('main').innerHTML=p?`<section class="card"><h2>Scheda personale</h2><form id="personForm"><div class="fields"><div><label>Nome e cognome</label><input name="name" required value="${esc(p.name)}"></div><div><label>Data di nascita</label><input name="birth" type="date" value="${esc(p.birth)}"></div><div><label>Sesso (facoltativo)</label><select name="sex"><option value="">Non indicato</option><option value="F" ${p.sex==='F'?'selected':''}>Femminile</option><option value="M" ${p.sex==='M'?'selected':''}>Maschile</option><option value="X" ${p.sex==='X'?'selected':''}>Altro / preferisco non indicare</option></select></div><div><label>Altezza (cm)</label><input name="height" type="number" min="50" max="250" step="0.1" value="${p.height??''}"></div><div><label>Peso (kg)</label><input name="weight" type="number" min="2" max="400" step="0.1" value="${p.weight??''}"></div><div><label>Note</label><input name="notes" value="${esc(p.notes)}"></div></div><p class="notice">Età: <b>${age(p.birth)??'—'}</b> anni · BMI: <b>${p.height>0&&p.weight>0?(p.weight/((p.height/100)**2)).toFixed(1):'—'}</b>. Questi dati non modificano automaticamente le soglie diagnostiche.</p><details class="help"><summary>Che cosa significano i termini medici?</summary><p class="notice"><b>Sistolica</b> = pressione massima; <b>diastolica</b> = pressione minima. <b>Ipertensione</b> = pressione alta; <b>ipotensione</b> = pressione bassa. <b>Ambulatorio</b> = misurazione eseguita in uno studio medico o struttura sanitaria. Le soglie indicate sono riferimenti per adulti, non una diagnosi individuale.</p></details><h3>Riferimenti clinici distinti</h3><p class="notice">Secondo le linee guida ESC 2024, per adulti: a casa ipertensione se sistolica ≥135 <b>oppure</b> diastolica ≥85 mmHg; in ambulatorio ≥140 oppure ≥90. Non sono obiettivi terapeutici individuali né soglie di emergenza. La classificazione dipende da misurazioni ripetute e dal contesto clinico.</p><div class="fields"><div><label>Contesto di misurazione</label><select name="setting"><option value="home" ${p.setting!=='clinic'?'selected':''}>A casa</option><option value="clinic" ${p.setting==='clinic'?'selected':''}>Ambulatorio</option></select></div><div><label>Soglia sistolica personalizzata (mmHg)</label><input name="customSys" type="number" min="60" max="250" placeholder="Automatico" value="${p.customSys??''}"></div><div><label>Soglia diastolica personalizzata (mmHg)</label><input name="customDia" type="number" min="30" max="180" placeholder="Automatico" value="${p.customDia??''}"></div><div><label>Terapia antipertensiva</label><select name="therapy"><option value="" ${!p.therapy?'selected':''}>Non indicato</option><option value="yes" ${p.therapy==='yes'?'selected':''}>Sì</option><option value="no" ${p.therapy==='no'?'selected':''}>No</option></select></div><div><label>Condizioni rilevanti (facoltativo)</label><input name="conditions" value="${esc(p.conditions??'')}" placeholder="Es. diabete, malattia renale"></div></div><p class="notice">Soglie effettive: <b>${limits(p).sys}/${limits(p).dia}</b> mmHg (sistolica/diastolica). Lascia vuoti i campi personalizzati per utilizzare i riferimenti standard del contesto scelto. Concorda eventuali valori personali con il medico.</p><h3>Limiti personalizzati (mmHg)</h3><p class="notice">L’intervallo verde/rosso del rettangolo è una visualizzazione grafica scelta da te, separata dalla valutazione delle soglie cliniche dei due valori.</p><div class="range-fields"><div><label>Limite inferiore grafico</label><input type="number" name="low" min="30" max="220" required value="${p.low}"></div><div><label>Limite superiore grafico</label><input type="number" name="high" min="40" max="260" required value="${p.high}"></div></div><div class="actions"><button type="submit">Salva scheda e soglie</button><button type="button" class="danger" id="deletePerson">Elimina persona</button></div></form></section><section class="card"><h2>${editing?'Modifica misurazione':'Nuova misurazione'}</h2><form id="measureForm"><div class="fields"><div><label>Data e ora</label><input name="date" type="datetime-local" required value="${esc(editing?.date||today())}"></div><div><label>Massima / sistolica (mmHg)</label><input name="sys" type="number" min="40" max="300" required value="${editing?.sys??''}"></div><div><label>Minima / diastolica (mmHg)</label><input name="dia" type="number" min="20" max="250" required value="${editing?.dia??''}"></div><div><label>Battiti/min (facoltativo)</label><input name="pulse" type="number" min="20" max="250" value="${editing?.pulse??''}"></div></div><div class="actions"><button type="submit">${editing?'Salva modifica':'+ Aggiungi misurazione'}</button>${editing?'<button type="button" class="secondary" id="cancelEdit">Annulla</button>':''}</div></form></section><section class="card"><h2>Grafico delle misurazioni</h2><div class="legend"><span><i class="dot" style="background:#229a60"></i>Entro intervallo grafico</span><span><i class="dot" style="background:#d83e49"></i>Fuori intervallo grafico</span></div><p class="notice">Gli indicatori S e D accanto alle barre confrontano separatamente sistolica e diastolica con le soglie cliniche impostate. Rosso significa «alla soglia o sopra», non diagnosi né emergenza.</p><div id="chart" class="chart-wrap"></div><p class="notice">Il grafico non rappresenta da solo una classificazione clinica. Ogni barra va dalla pressione minima (diastolica) alla massima (sistolica). Il tratto oltre i limiti impostati diventa rosso. Le barre sono ordinate per data; più misurazioni nello stesso giorno appaiono su righe separate.</p></section><section class="card"><h2>Riepilogo della pressione</h2><p class="notice">Medie e percentuali basate sulle misurazioni registrate, non sulle ore trascorse con pressione alta o bassa.</p><div class="summary-tabs"><button type="button" data-period="week">Settimana</button><button type="button" data-period="month">Mese</button><button type="button" data-period="year">Anno</button></div><div id="summary"></div></section><section class="card"><h2>Storico misurazioni</h2><div class="table-wrap" id="history"></div></section>`:'<div class="card empty">Aggiungi una persona per iniziare.</div>';if(p){renderChart(p);renderSummary(p);renderHistory(p);bindForms(p)}}function renderChart(p){const items=[...p.measurements].sort((a,b)=>a.date.localeCompare(b.date));if(!items.length){$('chart').innerHTML='<div class="empty">Nessuna misurazione registrata.</div>';return}const min=Math.min(40,p.low-10,...items.map(x=>x.dia-10));const max=Math.max(180,p.high+10,...items.map(x=>x.sys+10));const width=1040,left=142,right=155,top=42,step=38,height=top+items.length*step+45;const x=v=>left+(v-min)/(max-min)*(width-left-right);const line=(a,b,y,color)=>`<rect x="${x(a)}" y="${y}" width="${Math.max(0,x(b)-x(a))}" height="19" rx="2" fill="${color}"/>`;let svg=`<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Grafico pressioni per data"><rect x="${x(p.low)}" y="${top-10}" width="${x(p.high)-x(p.low)}" height="${items.length*step+8}" fill="#e8f6ee"/>`;const tick=20;for(let v=Math.ceil(min/tick)*tick;v<=max;v+=tick){svg+=`<line x1="${x(v)}" x2="${x(v)}" y1="${top-12}" y2="${height-32}" stroke="#d9e2eb"/><text x="${x(v)}" y="${height-14}" text-anchor="middle" font-size="13" fill="#526477">${v}</text>`}svg+=`<line x1="${x(p.low)}" x2="${x(p.low)}" y1="${top-14}" y2="${height-32}" stroke="#b92536" stroke-dasharray="5 4" stroke-width="2"/><line x1="${x(p.high)}" x2="${x(p.high)}" y1="${top-14}" y2="${height-32}" stroke="#b92536" stroke-dasharray="5 4" stroke-width="2"/>`;items.forEach((m,i)=>{const y=top+i*step;const a=m.dia,b=m.sys;svg+=`<text x="${left-12}" y="${y+14}" text-anchor="end" font-size="13" fill="#273a51">${esc(m.date.slice(8,10)+'/'+m.date.slice(5,7)+'/'+m.date.slice(0,4))} ${esc(m.date.slice(11,16))}</text>`;if(a<p.low)svg+=line(a,Math.min(b,p.low),y,'#d83e49');if(b>p.low&&a<p.high)svg+=line(Math.max(a,p.low),Math.min(b,p.high),y,'#229a60');if(b>p.high)svg+=line(Math.max(a,p.high),b,y,'#d83e49');const t=limits(p);const sb=m.sys>=t.sys,db=m.dia>=t.dia;svg+=`<text x="${width-145}" y="${y+14}" font-size="12" fill="${sb?'#b91c1c':'#166534'}">S ${m.sys} ${sb?'▲':'✓'}</text><text x="${width-70}" y="${y+14}" font-size="12" fill="${db?'#b91c1c':'#166534'}">D ${m.dia} ${db?'▲':'✓'}</text>`});svg+='</svg>';$('chart').innerHTML=svg}function renderSummary(p){
  const now=new Date(),items=p.measurements.filter(m=>{const d=new Date(m.date);if(!Number.isFinite(d.getTime()))return false;if(period==='year')return d.getFullYear()===now.getFullYear();if(period==='month')return d.getFullYear()===now.getFullYear()&&d.getMonth()===now.getMonth();const monday=new Date(now.getFullYear(),now.getMonth(),now.getDate());monday.setDate(monday.getDate()-(monday.getDay()+6)%7);return d>=monday&&d<new Date(monday.getTime()+7*86400000)});
  document.querySelectorAll('[data-period]').forEach(b=>{b.classList.toggle('on',b.dataset.period===period);b.setAttribute('aria-pressed',String(b.dataset.period===period))});
@@ -16,4 +18,146 @@ function renderHistory(p){const sorted=[...p.measurements].sort((a,b)=>b.date.lo
 $('people').onclick=e=>{const b=e.target.closest('[data-person]');if(b){selected=b.dataset.person;editing=null;render()}};$('newPerson').onclick=()=>{const name=prompt('Nome e cognome della nuova persona:');if(!name?.trim())return;const p={id:uid(),name:name.trim(),birth:'',notes:'',low:65,high:135,setting:'home',customSys:null,customDia:null,measurements:[]};db.people.push(p);selected=p.id;editing=null;save();render()};$('export').onclick=()=>{const blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='Cardiosoppi_backup_'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};$('importBtn').onclick=()=>$('importFile').click();$('importFile').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{const obj=JSON.parse(await file.text());if(!obj||!Array.isArray(obj.people)||!obj.people.every(p=>typeof p.id==='string'&&typeof p.name==='string'&&Array.isArray(p.measurements)&&Number.isFinite(p.low)&&Number.isFinite(p.high)&&p.low<p.high&&p.measurements.every(m=>typeof m.id==='string'&&typeof m.date==='string'&&Number.isFinite(m.sys)&&Number.isFinite(m.dia)&&m.sys>m.dia)))throw Error('Formato backup non valido');if(confirm('Importare il backup? Sostituirà tutti i dati presenti in questo browser.')){db=obj;selected=db.people[0]?.id||null;editing=null;save();render()}}catch(err){alert('Importazione non riuscita: '+err.message)}e.target.value=''};load();selected=db.people[0]?.id||null;render();
 
 if('serviceWorker' in navigator && (location.protocol==='https:' || location.hostname==='localhost')) navigator.serviceWorker.register('./sw.js').catch(()=>{});
-</script></body></html>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script>
+/* Cardiosoppi V5: journal di operazioni per utente; nessun dato sanitario in GitHub */
+(() => {
+'use strict';
+const CFG='cardiosoppi_supabase_config_v5';
+const QUEUE='cardiosoppi_cloud_queue_';
+const $s=id=>document.getElementById(id);
+const clone=o=>JSON.parse(JSON.stringify(o));
+const empty=()=>({people:[]});
+const copyPerson=p=>{const o=clone(p);delete o.measurements;return o};
+const personMap=d=>new Map((d.people||[]).map(p=>[p.id,p]));
+const measureMap=d=>new Map((d.people||[]).flatMap(p=>(p.measurements||[]).map(m=>[m.id,{owner:p.id,item:m}])));
+const newId=()=>typeof crypto!=='undefined'&&crypto.randomUUID?crypto.randomUUID():String(Date.now())+'-'+Math.random();
+let client=null,user=null,ready=false,queue=[],base=clone(db),initialLocal=null,loading=false;
+const info=(message,kind='normal')=>{const e=$s('sync-status');e.textContent=message;e.style.background=kind==='bad'?'#ffe7e7':kind==='good'?'#d9f7e8':'#e6f0f1'};
+const config=()=>{try{return JSON.parse(localStorage.getItem(CFG)||'null')}catch{return null}};
+const validConfig=c=>c&&/^https:\/\/[a-z0-9-]+\.supabase\.co\/?$/i.test(c.url||'')&&typeof c.key==='string'&&(c.key.startsWith('sb_publishable_')||c.key.startsWith('eyJ'));
+const event=(type,id,parent,payload,removed=false)=>({op_id:newId(),entity_type:type,entity_id:String(id),person_id:parent||null,payload:removed?{}:clone(payload),removed});
+function delta(a,b){
+ const ops=[],ap=personMap(a),bp=personMap(b),am=measureMap(a),bm=measureMap(b);
+ for(const [id,p] of bp){const old=ap.get(id);if(!old||JSON.stringify(copyPerson(old))!==JSON.stringify(copyPerson(p)))ops.push(event('person',id,null,copyPerson(p)));}
+ for(const [id,m] of bm){const old=am.get(id);if(!old||old.owner!==m.owner||JSON.stringify(old.item)!==JSON.stringify(m.item))ops.push(event('measure',id,m.owner,m.item));}
+ for(const [id,m] of am)if(!bm.has(id))ops.push(event('measure',id,m.owner,{},true));
+ for(const [id] of ap)if(!bp.has(id))ops.push(event('person',id,null,{},true));
+ return ops;
+}
+function apply(state,op){
+ if(op.entity_type==='person'){
+  const i=state.people.findIndex(p=>p.id===op.entity_id);
+  if(op.removed){if(i>=0)state.people.splice(i,1);return}
+  const current=i>=0?state.people[i]:null;
+  const next={...clone(op.payload),id:op.entity_id,measurements:current?.measurements||[]};
+  if(i<0)state.people.push(next);else state.people[i]=next;
+ }else if(op.entity_type==='measure'){
+  // Rimuove l'eventuale versione precedente anche in caso di spostamento.
+  state.people.forEach(p=>{p.measurements=(p.measurements||[]).filter(m=>m.id!==op.entity_id)});
+  if(!op.removed){const p=state.people.find(p=>p.id===op.person_id);if(p)p.measurements.push({...clone(op.payload),id:op.entity_id})}
+ }
+}
+function pendingSave(){if(!user)return;localStorage.setItem(QUEUE+user.id,JSON.stringify(queue))}
+const originalSave=save;
+save=function(){
+ const before=clone(base),saved=originalSave();
+ if(saved){if(user&&ready){queue.push(...delta(before,db));pendingSave();if(navigator.onLine)void flush()}base=clone(db)}
+ return saved;
+};
+function ui(){
+ const c=config();$s('sync-config').hidden=!!c;
+ $s('sync-login').hidden=!c||!!user;
+ $s('sync-connected').hidden=!user;
+ $s('sync-user').textContent=user?user.email:'';
+}
+function keepLocal(){originalSave();base=clone(db);render()}
+async function allEvents(){
+ let all=[],start=0;
+ for(;;){const {data,error}=await client.from('cardiosoppi_events').select('seq,op_id,entity_type,entity_id,person_id,payload,removed').eq('owner_id',user.id).order('seq',{ascending:true}).range(start,start+499);
+ if(error)throw error;
+ all.push(...data);if(data.length<500)break;start+=500;
+ if(start>50000)throw new Error('Troppe operazioni per questa versione. Contatta il supporto prima di continuare.');}
+ return all;
+}
+async function flush(){
+ if(!user||!ready||loading||!navigator.onLine||!queue.length)return;
+ loading=true;
+ try{
+  while(queue.length){const batch=queue.slice(0,100).map(op=>({...op,owner_id:user.id}));const {error}=await client.from('cardiosoppi_events').upsert(batch,{onConflict:'op_id',ignoreDuplicates:true});if(error)throw error;queue.splice(0,batch.length);pendingSave()}
+  info('✓ Tutte le modifiche sono nel cloud','good');
+ }catch(e){info('⚠ Da sincronizzare: '+queue.length+' modifiche. '+e.message,'bad')}
+ finally{loading=false}
+}
+async function sync(){
+ if(!user)return;
+ try{
+  info('Sincronizzazione in corso…');
+  // Prima invia la coda, poi rilegge la cronologia completa.
+  await flush();
+  const ops=await allEvents();const remote=empty();ops.forEach(op=>apply(remote,op));
+  queue.forEach(op=>apply(remote,op));
+  db=remote;selected=db.people.some(p=>p.id===selected)?selected:db.people[0]?.id||null;editing=null;keepLocal();
+  info(queue.length?`⚠ ${queue.length} modifiche ancora in attesa (offline o errore)`:`✓ Sincronizzato · ${db.people.length} persone · ${new Date().toLocaleTimeString('it-IT')}`,queue.length?'bad':'good');
+ }catch(e){info('⚠ Sincronizzazione non riuscita: '+e.message,'bad')}
+}
+async function connect(){
+ const {data:{session},error}=await client.auth.getSession();if(error)throw error;
+ user=session?.user||null;ready=false;ui();if(!user){info('Collegamento pronto. Accedi per sincronizzare.');return}
+ try{
+  initialLocal=clone(db);
+  const saved=localStorage.getItem(QUEUE+user.id);queue=saved?JSON.parse(saved):[];
+  if(!Array.isArray(queue))queue=[];
+  const ops=await allEvents(),remote=empty();ops.forEach(op=>apply(remote,op));
+  if(!ops.length&&initialLocal.people.length&&!queue.length){queue=delta(empty(),initialLocal);pendingSave();}
+  // Se vi sono altri dati locali non ancora nel cloud, l'utente può unirli manualmente.
+  const localIds=new Set(remote.people.map(p=>p.id));
+  const hasExtra=ops.length&&initialLocal.people.some(p=>!localIds.has(p.id)||(p.measurements||[]).some(m=>!remote.people.some(q=>(q.measurements||[]).some(v=>v.id===m.id))));
+  $s('sync-merge').style.display=hasExtra?'inline-block':'none';
+  if(hasExtra){try{localStorage.setItem('cardiosoppi_salvataggio_pre_sync_'+user.id,JSON.stringify(initialLocal))}catch{}}
+  queue.forEach(op=>apply(remote,op));
+  db=remote;selected=db.people[0]?.id||null;editing=null;keepLocal();ready=true;ui();
+  await sync();
+ }catch(e){ready=false;info('⚠ Connessione non riuscita: '+e.message,'bad')}
+}
+async function boot(){
+ const c=config();ui();if(!c){info('Archivio locale. Configura Supabase per sincronizzare.');return}
+ if(!validConfig(c)){info('Configurazione Supabase non valida','bad');return}
+ try{
+  client=window.supabase.createClient(c.url,c.key,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false}});
+  await connect();
+ }catch(e){info('⚠ Impossibile avviare Supabase: '+e.message,'bad')}
+}
+$s('sync-config-save').onclick=()=>{
+ const url=$s('sb-url').value.trim().replace(/\/$/,''),key=$s('sb-key').value.trim();
+ if(!validConfig({url,key})){alert('Inserisci Project URL e publishable/anon key corretti. Non usare service_role!');return}
+ localStorage.setItem(CFG,JSON.stringify({url,key}));location.reload();
+};
+$s('sync-change').onclick=()=>{if(!confirm('Cambiare progetto? I dati locali restano sul dispositivo, ma occorrerà riconnettersi.'))return;localStorage.removeItem(CFG);location.reload()};
+$s('sync-signin').onclick=async()=>{
+ if(!client)return;
+ info('Accesso in corso…');const {error}=await client.auth.signInWithPassword({email:$s('sync-email').value.trim(),password:$s('sync-password').value});
+ $s('sync-password').value='';if(error){info('⚠ Accesso fallito: '+error.message,'bad');return}await connect();
+};
+$s('sync-signout').onclick=async()=>{
+ if(queue.length&&!confirm(`Ci sono ${queue.length} modifiche non ancora inviate. Uscire comunque?`))return;
+ await client.auth.signOut();user=null;ready=false;queue=[];ui();info('Disconnesso. Dati locali ancora presenti: evita di usarli su un dispositivo condiviso.');
+};
+$s('sync-now').onclick=sync;
+$s('sync-merge').onclick=async()=>{
+ if(!initialLocal||!user||!ready)return;
+ if(!confirm('Unire persone e misurazioni LOCALI non presenti nel cloud? I record con lo stesso identificativo rimangono nella versione del cloud. Esporta prima un backup per sicurezza.'))return;
+ const merged=clone(db),ids=new Set(merged.people.map(p=>p.id));
+ for(const p of initialLocal.people){if(!ids.has(p.id)){merged.people.push(clone(p));continue}
+  const target=merged.people.find(x=>x.id===p.id),existing=new Set(target.measurements.map(m=>m.id));
+  for(const m of p.measurements||[])if(!existing.has(m.id))target.measurements.push(clone(m));}
+ db=merged;save();render();$s('sync-merge').style.display='none';await sync();
+};
+window.addEventListener('online',()=>{if(user)void sync()});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&user)void sync()});
+setInterval(()=>{if(user&&navigator.onLine&&ready)void sync()},60000);
+if(window.supabase)void boot();else info('⚠ Libreria Supabase non disponibile. I dati restano locali. Controlla Internet.','bad');
+})();
+</script>
+</body></html>
